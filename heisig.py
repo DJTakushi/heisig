@@ -6,6 +6,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import sys
+import os
 
 try:
     # for Python2
@@ -14,7 +15,7 @@ except ImportError:
     # for Python3
     from tkinter import *   ## notice lowercase 't' in tkinter here
 
-importFileName = 'heisig.csv'
+importFileName = os.path.dirname(os.path.realpath(__file__))+'\heisig.csv'
 if len(sys.argv) > 1: #use user-specified filename
     importFileName = sys.argv[1]
 print(importFileName)
